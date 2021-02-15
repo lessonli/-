@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe3b2109-1850-46c0-bbe9-e6ef3685b824" name="Default Changelist" comment="闭包处理">
+      <change afterPath="$PROJECT_DIR$/javascript/形参赋值默认值引发的问题/1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/形参赋值默认值引发的问题/8-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/base/dataType.md" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/base/dataType.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/base/闭包.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/base/闭包.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1oNhq9kHtwxEgLvMaGtpnyZNVPt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/javascript/形参赋值默认值引发的问题" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="tasks.servers" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lesson\Desktop\note\javascript\形参赋值默认值引发的问题" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.oneWeek.js">
+    <configuration name="demo" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229">
+      <method v="2" />
+    </configuration>
+    <configuration name="闭包.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/javascript/base/闭包.js" working-dir="$PROJECT_DIR$/javascript/base">
+      <method v="2" />
+    </configuration>
+    <configuration name="oneWeek.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="oneWeek.js" working-dir="$PROJECT_DIR$/javascript/base">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Node.js/Chrome.demo" />
+      <item itemvalue="Node.js.oneWeek.js" />
+      <item itemvalue="Node.js.闭包.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.oneWeek.js" />
+        <item itemvalue="Node.js.闭包.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe3b2109-1850-46c0-bbe9-e6ef3685b824" name="Default Changelist" comment="" />
+      <created>1613133148781</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613133148781</updated>
+      <workItem from="1613133151573" duration="128000" />
+      <workItem from="1613133290610" duration="122000" />
+      <workItem from="1613133419015" duration="31000" />
+      <workItem from="1613133457160" duration="2285000" />
+      <workItem from="1613137638407" duration="1796000" />
+      <workItem from="1613178817624" duration="14463000" />
+      <workItem from="1613318250641" duration="2405000" />
+      <workItem from="1613351745597" duration="2536000" />
+      <workItem from="1613380270504" duration="790000" />
+    </task>
+    <task id="LOCAL-00001" summary="装饰器模式">
+      <created>1613202920591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613202920591</updated>
+    </task>
+    <task id="LOCAL-00002" summary="闭包处理">
+      <created>1613204770382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613204770382</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="装饰器模式" />
+    <MESSAGE value="闭包处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="闭包处理" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

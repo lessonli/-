@@ -76,12 +76,21 @@ for (var i = 0; i < buttons.length; i++) {
 // + 不论点击BODY中的谁，都会触发BODY的点击事件
 // + ev.target是事件源：具体点击的是谁
 document.body.onclick = function (ev) {
-    var target = ev.target,
-        targetTag = target.tagName;
-
-    // 点击的是BUTTON按钮
-    if (targetTag === "BUTTON") {
-        var index = target.getAttribute('index');
-        console.log(`当前点击按钮的索引：${index}`);
-    }
+  var target = ev.target,
+    targetTag = target.tagName;
+  // 点击的是BUTTON按钮
+  if (targetTag === "BUTTON") {
+    var index = target.getAttribute('index');
+    console.log(`当前点击按钮的索引：${index}`);
+  }
 };
+let obj = {
+  name: 'aaa'
+}
+[1,2,3].forEach((item,index)=>{
+  console.log(this)
+},obj);
+
+[1,2,4].forEach(function (item,index) {
+    console.log(this)
+},obj)

@@ -3,7 +3,7 @@
     + NaN 
       > 表示不是一个数
       > NaN === NaN false
-      > isNAN 是否是有效数字 treu 表示不是有效数字, false 表示是有效数字
+      > isNAN 是否是有效数字 true 表示不是有效数字, false 表示是有效数字
     + Infinity （表示无穷大的值）
         >Infinity === Infinity true
 + Boolean
