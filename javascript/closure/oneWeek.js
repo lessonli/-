@@ -12,7 +12,6 @@
 // console.log(a); // 2
 
 
-
 // var test = (function (i) {
 //   return function () {
 //     alert(i *= 2);
@@ -133,17 +132,63 @@
 // var test = obj.prop.getFullName;
 // console.log(test());
 
+
+// 合并参数求和
 // let res = fn(1,2)(3);
 // console.log(res); //=>6  1+2+3
 
-// const demo = function (...res) {
-//   let result =  [...res];
-//   let resu = '';
-//   return function (reg){
-//     result.push(reg)
-//     return (
-//       result.reduce((prev,current)=> prev + current)
-//     )
+// function fn() {
+//   let outerArgs = Array.from(arguments)
+//
+//   return function anonymous() {
+//     let innerArgs = Array.from(arguments);
+//     // let result = eval(outerArgs.concat(innerArgs).join('+'))
+//     let result = outerArgs.concat(innerArgs)
+//     return result.reduce(function (prev, current) {
+//       return prev + current
+//     })
 //   }
 // }
-// console.log(demo(1, 2)(3));
+//
+// let res = fn(1, 2)(3);
+// console.log(res); //=>6  1+2+3
+
+// 重构reduce
+// reduce(reduce, callback, initValue)
+// let arr = [10, 20, 30, 40];
+
+// Array.prototype.reduce()
+// function reduce (arr, callback,initValue){
+//   let result = initValue , i = 0;
+//   // 没有传递 initValue 这个初始值， 把数组第一项 作为初始值
+//   if(typeof result == 'undefined') {
+//     result = arr[0]
+//     i = 1
+//   }
+// //  遍历数组中的每一项 每一次遍历都会执行 callback
+//   for (; i<arr.length; i++) {
+//     // 上次传过来的result
+//     result = callback(result,arr[i], i);
+//   }
+//   return result
+// }
+
+// let r = reduce(arr, function (result,item, index) {
+//   console.log(result, item, index)
+//   return result + item
+// })
+// console.log(r);
+
+// es6 实现 求和 fn(1,3)(2)
+
+// const fn = (...outerArr)=> {
+//   return (...innerArr)=> {
+//     return outerArr.concat(innerArr).reduce((res, item)=> {
+//       return res + item
+//     })
+//   }
+// }
+
+const fn = (...outerArr) => (...innerArr)=> outerArr.concat(innerArr).reduce((res, item) => res +item)
+
+console.log(fn(1, 2)(3));
