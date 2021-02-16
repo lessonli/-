@@ -1,3 +1,5 @@
 .idea
 .vscode
 .xml
+/.idea/
+.idea/workspace.xml
