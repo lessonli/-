@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button id="submit">提交</button>
+
+<script>
+  let submit  = document.querySelectorAll('#submit')[0]
+  const debounce = (func, wait, immedit = false) => {
+    let timer = null
+    return function (...params) {
+      clearTimeout(timer) // 每次进来都清除一下定制器// 保证 是最后一次执行
+      let now = immedit && !timer  // 表示第一次执行
+      timer = setTimeout(() => {
+        timer = null
+        /* 当函数是 立即执行的时候 就是点击执行 点击结束 不执行*/
+        !immedit ? func.call(this, ...params) : null
+      }, wait)
+
+      now ? func.call(this, ...params) : null
+    }
+  }
+  function  handle() {
+    console.log('ok', this)
+  }
+  submit.onclick = debounce(handle, 500, false)
+</script>
+</body>
+</html>
