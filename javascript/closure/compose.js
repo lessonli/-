@@ -63,30 +63,38 @@ div2(mul3(add1(add1(0)))); //=>3
 // console.log(compose()(10));
 
 // 2 . redux 源码处理
-function compose(...funcs) {
-  if (funcs.length === 0) {
-    // infer the argument type so it is usable in inference down the line
-    return arg => {
-      console.log(arg, 'arg');
-      return arg
-    }
-  }
-  if (funcs.length === 1) {
-    console.log(funcs[0].toString())
-    return funcs[0] // 函数返回出来了
-    // return ~function (x) {
-    //   return x +1
-    // }()
-  }
-  return funcs.reduce((prev, current) => (...args) => prev(current(...args)))
-  // return funcs.reduce(function (prev, current) {
-  //   return function (...args) {
-  //     console.log(prev.toString(), 'prev')
-  //     console.log(current.toString(), 'current')
-  //     return prev(current(...args))
-  //   }
-  // })
-}
+// function compose(...funcs) {
+//   if (funcs.length === 0) {
+//     // infer the argument type so it is usable in inference down the line
+//     return arg => {
+//       console.log(arg, 'arg');
+//       return arg
+//     }
+//   }
+//   if (funcs.length === 1) {
+//     console.log(funcs[0].toString())
+//     return funcs[0] // 函数返回出来了
+//     // return ~function (x) {
+//     //   return x +1
+//     // }()
+//   }
+//   return funcs.reduce((prev, current) => (...args) => prev(current(...args)))
+//   // return funcs.reduce(function (prev, current) {
+//   //   return function (...args) {
+//   //     console.log(prev.toString(), 'prev')
+//   //     console.log(current.toString(), 'current')
+//   //     return prev(current(...args))
+//   //   }
+//   // })
+// }
 
 // console.log(compose(div2, mul3, add1)(2));
 // console.log(compose(add1)(2));
+
+const compose = (...funcs)=> {
+  if(funcs.length === 0) return arg => arg
+  if(funcs.length ===1 ) return  funcs[0]
+  return  funcs.reduce((prev, current) => (...arg) => prev(current(...arg)))
+}
+console.log(compose(div2, mul3, add1)(2));
+console.log(compose(add1)(2));
