@@ -77,7 +77,6 @@ function compose(...funcs) {
     // return ~function (x) {
     //   return x +1
     // }()
-
   }
   return funcs.reduce((prev, current) => (...args) => prev(current(...args)))
   // return funcs.reduce(function (prev, current) {
