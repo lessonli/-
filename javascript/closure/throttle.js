@@ -10,6 +10,8 @@
  */
 
 function throttle(func, wait = 300) {
+
+
   let timer = null, previous = 0;
   return function (...params) {
     let now = new Date(), remaining = wait - (now - previous); // wait - (当前时间 减去 上一次执行的时间) = 还差多久 达到 我们一次触发的频率
