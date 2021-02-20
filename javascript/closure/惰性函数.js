@@ -47,8 +47,8 @@
 // console.log(h);
 
 
-function get_css (element, attr) {
-  if('getComputedStyle' in window) {
+function get_css(element, attr) {
+  if ('getComputedStyle' in window) {
     get_css = function (element, attr) {
       return window.getComputedStyle(element)[attr]
     }
@@ -60,9 +60,9 @@ function get_css (element, attr) {
   return get_css(element, attr); // 第一次函数执行也是需要获取函数结果的
 }
 
-var w = get_css(document.body, 'width');
+let w = get_css(document.body, 'width');
 console.log(w, 'gua');
 
 // 后续再次执行get_css，执行是的是第一次重构后的小方法，无需再次校验兼容性
-var h = get_css(document.body, 'height');
+let h = get_css(document.body, 'height');
 console.log(h);

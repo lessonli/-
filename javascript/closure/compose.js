@@ -91,10 +91,10 @@ div2(mul3(add1(add1(0)))); //=>3
 // console.log(compose(div2, mul3, add1)(2));
 // console.log(compose(add1)(2));
 
-const compose = (...funcs)=> {
-  if(funcs.length === 0) return arg => arg
-  if(funcs.length ===1 ) return  funcs[0]
-  return  funcs.reduce((prev, current) => (...arg) => prev(current(...arg)))
+const compose = (...funcs) => {
+  if (funcs.length === 0) return arg => arg
+  if (funcs.length === 1) return funcs[0]
+  return funcs.reduce((prev, current) => (...arg) => prev(current(...arg)))
 }
 console.log(compose(div2, mul3, add1)(2));
-console.log(compose(add1)(2));
+console.log(compose(add1)(2))
