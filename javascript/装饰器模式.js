@@ -12,7 +12,6 @@ class My {
 function add(target) {
   target.type = 'my'
 }
-
 function readonly(target, key, descriptor) {// Object.defineproperty(obj,pi,{})
   // console.log(target,key,descriptor.initializer());
   descriptor.writable = false;
@@ -20,7 +19,6 @@ function readonly(target, key, descriptor) {// Object.defineproperty(obj,pi,{})
   //     console.log(My.prototype === target);
   // })
 }
-
 function enumerable(target, key, descriptor) {
   console.log(descriptor.enumerable)
   descriptor.enumerable = false;
