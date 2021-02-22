@@ -95,4 +95,4 @@ console.log(sanmao instanceof Dog); //=>true
 //     B: 20
 // };
 // console.log(Object.create()); //Uncaught TypeError: Object prototype may only be an Object or null: undefined
-// console.log(Object.create(null));
+// console.log(Object.create(null))
