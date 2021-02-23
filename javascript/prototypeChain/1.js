@@ -77,7 +77,7 @@ function _new(Ctor) {
   var obj = Object.create(Ctor.prototype);
   // 基于apply既可以改变this，也可以把数组中的每一项传递给函数
   var result = Ctor.apply(obj, params);
-  if (/^(object|function)$/.test(typeof result)) return result;
+  if (/^(object|function)$/.test(typeof result)) return result; // 返回引用类型  如果不是引用类型 默认返回实例
   return obj;
 }
 
@@ -95,4 +95,14 @@ console.log(sanmao instanceof Dog); //=>true
 //     B: 20
 // };
 // console.log(Object.create()); //Uncaught TypeError: Object prototype may only be an Object or null: undefined
-// console.log(Object.create(null));
+// console.log(Object.create(null))
+
+/* 重写 new 方法*/
+function _new (Ctor, ...params) {
+  let obj = Object.create(Ctor.prototype) // 不支持 IE 678
+  let result = Ctor.call(obj, ...params) // 将当前函数的this 指向创建出来的Obj
+  // 如果返回的是引用类型 则 就是该引用类型的值， 否则 发返回 该实例
+  if(/^(object|function)$/.test(typeof  result)) return result
+  return  obj
+}
+
