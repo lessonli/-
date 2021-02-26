@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <script src="../note/javascript/closure/闭包.js"></script>
 <body>
 <button id="submit">提交</button>
 
 <script>
-  let submit  = document.querySelectorAll('#submit')[0]
+  let submit = document.querySelectorAll('#submit')[0]
   const debounce = (func, wait, immedit = false) => {
     let timer = null
     return function (...params) {
@@ -24,9 +24,11 @@
       now ? func.call(this, ...params) : null
     }
   }
-  function  handle() {
+
+  function handle() {
     console.log('ok', this)
   }
+
   submit.onclick = debounce(handle, 500, false)
 </script>
 </body>

@@ -9,71 +9,72 @@ class My {
   @readonly r = 3.15
 }
 
-function add(target) {
+function add (target) {
   target.type = 'my'
 }
-function readonly(target, key, descriptor) {// Object.defineproperty(obj,pi,{})
+
+function readonly (target, key, descriptor) { // Object.defineProperty(obj,pi,{})
   // console.log(target,key,descriptor.initializer());
-  descriptor.writable = false;
+  descriptor.writable = false
   // setTimeout(()=>{
   //     console.log(My.prototype === target);
   // })
 }
-function enumerable(target, key, descriptor) {
+
+function enumerable (target, key, descriptor) {
   console.log(descriptor.enumerable)
-  descriptor.enumerable = false;
+  descriptor.enumerable = false
 }
 
-let my = new My();
-for (let key in my) {
-  console.log(key);
+const my = new My()
+for (const key in my) {
+  if (my.hasOwnProperty(key)) {
+    console.log(key)
+  }
 }
-
 
 class Animal {
   @enumerable
   @readonly PI = 3.4
 
   @beforeSay
-  say() {
+  say () {
     console.log('say')
   }
 }
 
-function beforeSay(target, key, descriptor) {
-  let oldSay = descriptor.value
+function beforeSay (target, key, descriptor) {
+  const oldSay = descriptor.value
   descriptor.value = function () {
     console.log('before say')
     oldSay.call(this)
   }
 }
 
-let animal = new Animal();
-for (let key in animal) {
+const animal = new Animal()
+for (const key in animal) {
   if (animal.hasOwnProperty(key)) {
-    console.log(key);
+    console.log(key)
   }
-
 }
 
 // 装饰器多个 时候怎么执行
 @logger2()
 @logger1()
 class Logger {
-
 }
 
-function logger1() {
+function logger1 () {
   console.log('outter 1')
   return function () {
-    console.log('logger1');
+    console.log('logger1')
   }
 }
 
-function logger2() {
+function logger2 () {
   console.log('outter 2')
   return function () {
-    console.log('logger2');
+    console.log('logger2')
   }
 }
 
@@ -81,5 +82,3 @@ function logger2() {
 // 如果装饰器是函数 会直接执行，内部装饰类的时候会从内部依次传递到外部去
 
 // mixin 混合 1） 怎么实现 类的混合 属性的混合      Vue.mixin()
-
-

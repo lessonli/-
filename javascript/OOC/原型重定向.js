@@ -12,30 +12,30 @@
 *     + 2. 如果之前原型上还有其他的属性和方法, 则在重定向之前最好做 ‘新老’原型对象的合并处理
 * */
 
-function Fn() {
-  /* 两个私有属性*/
-  this.x = 100;
-  this.y = 200;
+function Fn () {
+  /* 两个私有属性 */
+  this.x = 100
+  this.y = 200
 }
-/* 会造成 代码的 冗余, 不好统一 管理*/
-Fn.prototype.read = function () {};
-Fn.prototype.write = function () {};
+/* 会造成 代码的 冗余, 不好统一 管理 */
+Fn.prototype.read = function () {}
+Fn.prototype.write = function () {}
 // 。。。。 大量代码
-Fn.prototype.jump = function () {};
+Fn.prototype.jump = function () {}
 
-/* 利用 原型重定向的方式来写*/
+/* 利用 原型重定向的方式来写 */
 
-/*Fn.prototype = {
+/* Fn.prototype = {
   /!* 什么都没有的情况*!/
   constructor: Fn,
 
-}*/
+} */
 
-/* 原来的construcctor 也会携带*/
+/* 原来的constructor 也会携带 */
 Fn.prototype = Object.assign(Fn.prototype, {
-    say() {},
-    song(){},
-    eat(){},
-    jump(){}
+  say () {},
+  song () {},
+  eat () {},
+  jump () {}
 
 })
