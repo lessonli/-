@@ -1,0 +1,18 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lessonli/note.git",
+  "author": "lesson <lisen@qbyun.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.5",
+    "standard": "^16.0.3",
+    "webpack": "^5.24.2"
+  },
+  "dependencies": {
+    "eslint": "^7.20.0",
+    "prettier": "^2.2.1"
+  }
+}
