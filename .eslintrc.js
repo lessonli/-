@@ -15,7 +15,8 @@ module.exports = {
     'no-constant-condition': 2, // 禁止在条件中使用常量表达式 if(true) if(1)
     'no-dupe-keys': 2, // 在创建对象字面量时不允许键重复 {a:1,a:1}
     'keyword-spacing': 1,
-    'no-unused-vars': 'off'
+    'no-unused-vars': 'off',
+    'no-extend-native': 'off' // 关闭禁止扩展原生对象
 
   }
   // "prefer-const": 0
