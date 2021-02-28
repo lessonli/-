@@ -5,6 +5,7 @@ function Foo() {
   console.log(this)
   return this;
 }
+
 // 重写 getName
 Foo.getName = function () {
   console.log(2);
@@ -17,9 +18,11 @@ Foo.prototype.getName = function () {
 var getName = function () {
   console.log(4);
 };
+
 function getName() {
   console.log(5);
 }
+
 Foo.getName(); // 2  原因 被重写掉了
 getName(); //4
 

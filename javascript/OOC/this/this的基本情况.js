@@ -25,7 +25,7 @@
 // obj.fn() // obj
 //
 
-/* 第一题*/
+/* 第一题 */
 /*
 var num = 10;
 var obj = {
@@ -43,10 +43,9 @@ obj.fn = (function (num) {
 var fn = obj.fn;
 fn(5); // 函数执行  this window
 obj.fn(10);  // this => window
-console.log(num, obj.num);*/
+console.log(num, obj.num); */
 
-
-/*第二题*/
+/* 第二题 */
 // var fullName = 'language';
 // var obj = {
 //   fullName: 'javascript',
@@ -60,7 +59,7 @@ console.log(num, obj.num);*/
 // var test = obj.prop.getFullName;
 // console.log(test());  // this window
 
-/*第三题*/
+/* 第三题 */
 // var name = 'window';
 // var Tom = {
 //   name: "Tom",

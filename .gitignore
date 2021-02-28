@@ -25,3 +25,4 @@
 # IntelliJ
 /out/
 .history
+yarn.lock

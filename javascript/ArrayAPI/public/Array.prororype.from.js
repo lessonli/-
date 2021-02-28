@@ -35,4 +35,4 @@ function mapFn(item, index) {
 
 let arr1 = Array.from(arr, mapFn, obj);
 
-console.log(arr1, 'arr1', obj)
+console.log(arr1, 'arr1', obj);
