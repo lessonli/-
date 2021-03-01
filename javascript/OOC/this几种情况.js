@@ -20,7 +20,7 @@ function fn () {
 // fn 先 基于 __proto__ 找到 Function.prototype.call, 把call 执行的时候 call方法内部实现一些功能， 会把fn 执行， 并且让fn 中的this this 改为第一个实参
 fn.call(obj, 10, 20)
 
-fn.call()// 不传/ null  this window/undefuined
+fn.call()// 不传/ null  this window/undefined
 
 // apply和 call 只有一个区别, 所有需要传递给函数的实参全部用 '[]'包裹
 fn.apply(obj, [10])
