@@ -35,6 +35,7 @@
  *
  * @param obj 要检测的实例(不支持基础数据类型)
  * @param constructor(要检测是类, 必须是一个函数)
+ * @return Boolean 是一个当前constructor 的实例 返回true 否则 返回false
  */
 function instanceOf (obj, constructor) {
   // obj 不是引用数据类型 并且 constructor 不是函数 返回 false
