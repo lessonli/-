@@ -29,3 +29,29 @@
 // typeof number string function object boolean bigint symbol undefined(检测未定义的变量), 检测null 为Object
 // console.log(Object('12') instanceof String)
 //= ==========================================》
+
+// 重写instanceof
+/**
+ *
+ * @param obj 要检测的实例(不支持基础数据类型)
+ * @param constructor(要检测是类, 必须是一个函数)
+ */
+function instanceOf (obj, constructor) {
+  // obj 不是引用数据类型 并且 constructor 不是函数 返回 false
+  if (obj == null || /^(function| object) $/i.test(typeof obj)) return false
+  if (typeof constructor !== 'function') throw new TypeError('Right-hand side of "instanceof" is not callable')
+
+  let proto = Reflect.getPrototypeOf(obj)
+  const prototype = constructor.prototype
+
+  while (true) {
+    if (proto === null) return false
+    // 找到对象的原型链包含的原型 则证明对象是类的一个实例
+    if (proto === prototype) return true
+    // 逐级向上查找即可
+    proto = Reflect.getPrototypeOf(proto)
+  }
+}
+
+console.log(instanceOf([], Array))
+console.log(instanceOf({}, Array))
