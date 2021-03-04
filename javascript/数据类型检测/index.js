@@ -39,7 +39,7 @@
  */
 function instanceOf (obj, constructor) {
   // obj 不是引用数据类型 并且 constructor 不是函数 返回 false
-  if (obj == null || /^(function| object) $/i.test(typeof obj)) return false
+  if (obj == null || /^(function | object) $/i.test(typeof obj)) return false
   if (typeof constructor !== 'function') throw new TypeError('Right-hand side of "instanceof" is not callable')
 
   let proto = Reflect.getPrototypeOf(obj)
