@@ -1,5 +1,5 @@
 /* */
-var getProto = Object.prototype // 获取实例的原型对象
+var getProto = Object.getPrototypeOf // 获取实例的原型对象 __proto__
 var class2type = {}
 var toString = class2type.toString // 检测数据类型 Object.prototype.toString
 var hasOwn = class2type.hasOwnProperty // Object.hasOwnProperty
@@ -70,3 +70,31 @@ var isArrLike = function (obj) {
 }
 
 /* 检测 是否是一 纯粹对象 */
+function isPlainObject (obj) {
+  const type = toType(obj)
+  if (!obj || type !== 'object') return false
+
+  // 原型 ctor 和 数据类型
+  const proto = getProto(obj) // Object.create(null) 创建的 没有原型对象
+  if (!proto) return true
+  // 获取当前值原型对象 上的 constructor 【获取它的构造函数】
+  // 由构造 函数 并与 构造函数的 需要直接是 Object
+  const ctor = hasOwn.call(proto, 'constructor') && proto.constructor
+  return typeof ctor === 'function' && fnToString.call(ctor === ObjectFunctionString)
+}
+//  检测是否是空对象 不是很好 不推荐
+// function isEmptyObject (obj) {
+//   // forIn 可以遍历到 自己在内置类 原型上扩展的方法
+//   // 并且 无法遍历 symbol 的属性
+//   var name
+//   for (name in obj) {
+//     return false
+//   }
+//   return true
+// }
+
+// 完美的解决方案
+function isEmptyObj (obj) {
+  var keys = [...Object.getOwnPropertySymbols(obj), ...Object.getOwnPropertyNames(obj)]
+  return keys.length === 0
+}
