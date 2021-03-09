@@ -55,5 +55,4 @@ function instanceOf (obj, constructor) {
 }
 
 console.log(instanceOf([], Array))
-console.log()
 console.log(instanceOf({}, Array))
