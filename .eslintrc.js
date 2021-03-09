@@ -15,8 +15,8 @@ module.exports = {
     'no-dupe-keys': 2, // 在创建对象字面量时不允许键重复 {a:1,a:1}
     'keyword-spacing': 1,
     'no-unused-expressions': 'off',
-    'no-extend-native': 'off' // 关闭禁止扩展原生对象
-
+    'no-extend-native': 'off', // 关闭禁止扩展原生对象
+    'no-var': 0
   }
   // "prefer-const": 0
   // "no-caller": 1,//禁止使用arguments.caller或arguments.callee
