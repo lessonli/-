@@ -16,7 +16,8 @@ module.exports = {
     'keyword-spacing': 1,
     'no-unused-expressions': 'off',
     'no-extend-native': 'off', // 关闭禁止扩展原生对象
-    'no-var': 0
+    'no-var': 0,
+    'no-unused-vars': 0
   }
   // "prefer-const": 0
   // "no-caller": 1,//禁止使用arguments.caller或arguments.callee
