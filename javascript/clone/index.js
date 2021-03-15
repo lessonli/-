@@ -41,6 +41,7 @@ function getOwnPropertys (obj) {
 // 浅克隆
 function shallowClone (obj) {
   // 处理其它类型的值克隆
+  // eslint-disable-next-line no-undef
   const type = toType(obj)
   if (/^(number|string|boolean|null|undefiend|symbol|bigint)$/.test(type)) return obj
   if (/^function$/.test(type)) {
@@ -65,6 +66,7 @@ function shallowClone (obj) {
 // 深克隆
 function deepClone (obj, cache = new Set()) {
   // 只有数组和对象我们再处理深克隆，其余的情况直接按照浅克隆处理即可
+  // eslint-disable-next-line no-undef
   const type = toType(obj)
   if (!/^(array|object)$/.test(type)) return shallowClone(obj)
 
