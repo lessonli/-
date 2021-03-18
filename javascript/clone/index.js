@@ -22,6 +22,10 @@
     if (obj == null) {
       return obj + ''
     }
+    // 2.判断obj为原始值类型直接走typeof obj简单方便
+    // 3.obj 为object 或 function类型时走class2type.toString.call(obj) 检测数据类型，
+    // 使用Object.prototype.toString.call(obj)检测数据类型时返回值都是“[object ?]”
+    // 4.把[object Number]当做属性值去classtype中出对应的值返回 “number”,找不到则返回“object”
     return typeof obj === 'object' || typeof obj === 'function'
       ? class2type[toString.call(obj)] || 'object'
       : typeof obj
@@ -70,7 +74,8 @@ function deepClone (obj, cache = new Set()) {
   const type = toType(obj)
   if (!/^(array|object)$/.test(type)) return shallowClone(obj)
 
-  // 避免自己套用自己导致的无限递归
+  // 避免自己套用自己导致的无限递归 会造成溢栈
+  // 避免 obj.self = obj 的处理
   if (cache.has(obj)) return shallowClone(obj)
   cache.add(obj)
 
@@ -78,6 +83,7 @@ function deepClone (obj, cache = new Set()) {
   let clone = {}
   type === 'array' ? clone = [] : null
   keys.forEach(key => {
+    // 数组的话 key 是下标 对象的话 key 就是属性
     clone[key] = deepClone(obj[key], cache)
   })
   return clone

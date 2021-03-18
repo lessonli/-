@@ -48,7 +48,7 @@ function shadowClone (obj) {
   if ((/^(boolean|string|number|undefined|symbol)$/i).test(typeof obj)) {
     return obj
   }
-  if (/^function$/.test(typeof obb)) {
+  if (/^function$/.test(typeof obj)) {
   //   返回一个不同的函数 但是最后执行的效果和原始函数一致 实现克隆的效果
     return function proxy () {
       obj()
