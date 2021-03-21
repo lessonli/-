@@ -1,0 +1,37 @@
+{
+  "name": "webpack03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server --open",
+    "build:vue": "webpack --config vue.dll_config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.5",
+    "@babel/plugin-syntax-class-properties": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/runtime-corejs3": "^7.13.10",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.1.3",
+    "html-webpack-plugin": "^4.0.0-alpha",
+    "style-loader": "^2.0.0",
+    "thread-loader": "^3.0.1",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "vue": "^2.6.12"
+  }
+}
