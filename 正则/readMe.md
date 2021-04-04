@@ -672,9 +672,22 @@ console.log(RegExp.$1)  //0  // 每次匹配上之后会挂载到 RegExp.$_(0-9)
    }())
    const time = '2020年6月12日 12时12分32秒'
    console.log(time.formatTime2('{0}-{1}-{2} {3}-{4}-{5}'))
-   
-   
-   
+   ```
+
+   **queryURLParams**
+
+   ```javascript
+   ~function() {
+   	function queryURLParams(params) {
+   		this.replace(/([^?=#&]+)=([^?=#&]+)/g, (...[, $1, $2])=> obj[$1] = $2)
+   		// 处理hash
+   		this.replace(/#([?#&=]+)/g, (...[, $1])=>obj['hash'] = $1)
+   		retutn params? obj[params]:obj
+   	}
+   	['queryURLParams'].forEach(item => String.prototype[item] = eval(item))
+   }()
+   const url = 'http://www.baidu.com/?name=lisen&age=19#video'
+   console.log(url.queryURLParams('hash')
    
    ```
 
