@@ -17,6 +17,7 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
+    "@types/node": "^14.14.37",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.21.0",
     "prettier": "^2.2.1"

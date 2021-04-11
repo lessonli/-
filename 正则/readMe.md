@@ -687,7 +687,7 @@ console.log(RegExp.$1)  //0  // 每次匹配上之后会挂载到 RegExp.$_(0-9)
    	['queryURLParams'].forEach(item => String.prototype[item] = eval(item))
    }()
    const url = 'http://www.baidu.com/?name=lisen&age=19#video'
-   console.log(url.queryURLParams('hash')
+   32.log(url.queryURLParams('hash')
    
    ```
 
